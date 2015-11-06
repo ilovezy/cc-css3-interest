@@ -1,0 +1,163 @@
+/*
+* @Author: Administrator
+* @Date:   2015-11-06 20:23:55
+* @Last Modified by:   Administrator
+* @Last Modified time: 2015-11-06 21:46:02
+*/
+
+body {
+    background: #47c9af;
+    color: #74777b;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:link,
+a:visited,
+a:focus {
+    text-decoration: none;
+    outline-style: none;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+*:after,
+*:before {
+    display: block;
+    content: "";
+}
+
+*:after {
+    clear: both;
+}
+
+
+/* navgaitor */
+
+.nav {
+    width: 1200px;
+    height: 300px;
+    margin: 200px auto;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.tooltip {
+    display: inline-block;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.tooltip-content {
+    position: absolute;
+    color: black;
+    z-index: 999;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #FFF;
+    left: 50%;
+    margin-left: -40px;
+    bottom: 100%;
+    opacity: 0.5;
+    text-align: center;
+    padding-top: 28px;
+    opacity: 0;
+}
+
+.tooltip-content i {
+    opacity: 0;
+}
+
+
+/* transform */
+
+.tooltip-content,
+.tooltip-content i {
+    transition: all 0.3s ease-in-out;
+}
+
+.tooltip:hover {
+    color: #FFF;
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i {
+    opacity: 1;
+}
+
+.tooltip:hover .tooltip-content {
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0);
+    transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0);
+}
+
+.tooltip:hover .tooltip-content i {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+
+/* different tooltip-effect */
+
+.tooltip-effect-1 .tooltip-content {
+    -webkit-transform: translate3d(0, 10px, 0) rotate3d(1, 1, 1, 45deg);
+    transform: translate3d(0, 10px, 0) rotate3d(1, 1, 1, 45deg);
+}
+
+.tooltip-effect-1 .tooltip-content i {
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+}
+
+.tooltip-effect-2 .tooltip-content {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+
+.tooltip-effect-2 .tooltip-content i {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+}
+
+.tooltip-effect-3 .tooltip-content {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+.tooltip-effect-4 .tooltip-content {
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+}
+
+.tooltip-effect-5 .tooltip-content {
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+.tooltip-effect-6 .tooltip-content {
+    -webkit-transform: scale(0.1) rotate(90deg);
+    -moz-transform: scale(0.1) rotate(90deg);
+    -ms-transform: scale(0.1) rotate(90deg);
+    -o-transform: scale(0.1) rotate(90deg);
+    transform: scale(0.1) rotate(90deg);
+}
